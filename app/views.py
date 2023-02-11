@@ -33,7 +33,8 @@ def workdir_view(request):
     # по аналогии с `time_view`, напишите код,
     # который возвращает список файлов в рабочей 
     # директории
-    dir_cont = os.listdir(r'F:\Education\Programming\2023\02\12\first-project\first_project')
+    current_workdir = os.getcwd()
+    dir_cont = os.listdir(current_workdir)
     return HttpResponse(dir_cont)
 
   #  raise NotImplemented
